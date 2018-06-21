@@ -1,3 +1,22 @@
+/*
+ * Copyright (C) 2017  Busacca Davide
+ *
+ * This file is part of DSP-Synthesis-Library
+ *
+ * DSP-Synthesis-Library is free software: you can redistribute it and/or modify it under
+ * the terms of the GNU Affero General Public License as published by the Free
+ * Software Foundation (FSF), either version 3 of the License, or (at your
+ * option) any later version.
+ *
+ * DSP-Synthesis-Library is distributed in the hope that it will be useful, but WITHOUT
+ * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
+ * FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more
+ * details.
+ *
+ * You should have received a copy of the Affero GNU General Public License
+ * version 3 along with DSP-Synthesis-Library.  If not, see http://www.gnu.org/licenses/
+ */
+
 #ifndef PANNER_BUSACCA_CPP
 #define PANNER_BUSACCA_CPP
 
@@ -73,7 +92,7 @@ int Panner::process (float** samples, int nSamples, int nChannels){
 		copy.process(samples, nSamples, nChannels);
 	}
 	
-	if(nChannels%2) nChannels--; //se il numero di canali è dispari, l'ultimo canale non viene processato (viene lasciato centrale)
+	if(nChannels%2) nChannels--; //se il numero di canali Ã¨ dispari, l'ultimo canale non viene processato (viene lasciato centrale)
 	
 	for(int channel = 0; channel < nChannels; channel++){
 		chooseCostant(channel);
